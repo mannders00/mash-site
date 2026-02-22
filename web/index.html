@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASH — Single-Binary Linux Server Admin</title>
+    <title>MASH — Linux Server Admin</title>
 
     <script type="module" src="/vendor/webawesome-3.2.1/webawesome.loader.js"></script>
     <link rel="stylesheet" href="/vendor/webawesome-3.2.1/styles/webawesome.css" />
@@ -247,8 +247,8 @@
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><wa-button variant="success" size="small" href="#">Live Demo</wa-button></li>
+                <li><a href="https://buy.polar.sh/polar_cl_nFN6sEXGkOGq1shs9L2382ZHnp8mmUXK07Hfp1GMHXY">Get</a></li>
+                <li><wa-button variant="success" size="small" href="https://demo.mashell.sh/">Live Demo</wa-button></li>
             </ul>
         </div>
     </nav>
@@ -257,19 +257,22 @@
     <section class="hero">
         <div class="wrap">
             <div class="hero-inner">
-                <div class="hero-badge">Open Source · Single Binary · Zero Config</div>
+                <div class="hero-badge">Single Binary · Zero Config</div>
                 <h1>MASH</h1>
                 <p class="tagline">
-                    Single-binary Linux server admin, visualized in an interactive pannable &amp; zoomable 2D grid.
+                    One binary. One browser tab. Full control over your Linux server —
+                    monitor, manage, and configure everything from a real-time interactive grid
+                    with a built-in terminal.
                 </p>
+
                 <div class="hero-buttons">
-                    <wa-button variant="success" size="large" href="#">
+                    <wa-button variant="success" size="large" href="https://demo.mashell.sh/">
                         <wa-icon name="arrow-up-right-from-square" slot="start"></wa-icon>
                         Live Demo
                     </wa-button>
-                    <wa-button variant="neutral" appearance="outlined" size="large" href="#">
+                    <wa-button size="large" href="https://buy.polar.sh/polar_cl_nFN6sEXGkOGq1shs9L2382ZHnp8mmUXK07Hfp1GMHXY">
                         <wa-icon name="code-branch" slot="start"></wa-icon>
-                        GitHub
+                        Get
                     </wa-button>
                 </div>
             </div>
@@ -282,12 +285,12 @@
             <div class="section-label"><wa-icon name="terminal"></wa-icon> What is MASH</div>
             <h2 class="section-title">Your entire server. One browser tab.</h2>
             <p class="section-desc">
+                <!-- , and talks to <code>systemctl</code> / <code>journalctl</code> -->
+                <!-- services, logs, files, firewall rules, cron jobs, and user accounts -->
                 MASH is a single Go binary you drop onto any Linux box. It reads
-                <code>/proc</code>, <code>/sys</code>, and talks to
-                <code>systemctl</code> / <code>journalctl</code> so you don't have to.
+                <code>/proc</code>, <code>/sys</code> so you don't have to.
                 The result is a real-time, interactive 2D grid in your browser —
-                CPU, memory, disks, network, processes, services, logs, files, firewall rules,
-                cron jobs, and user accounts — all in one place, updated live via SSE.
+                CPU, memory, disks, network, processes,  — all in one place, updated live via SSE.
             </p>
 
             <div class="terminal">
@@ -322,8 +325,7 @@
                     <div class="feature-icon"><wa-icon name="microchip"></wa-icon></div>
                     <div class="feature-title">CPU / Memory / Load / Temps</div>
                     <div class="feature-text">
-                        Per-core utilization, memory pressure, 1/5/15 load averages, and thermal
-                        readings — streamed in real time from <code>/proc</code> and <code>/sys</code>.
+                        Per-core utilization, memory pressure, 1/5/15 load averages, and more — streamed in real time from <code>/proc</code> and <code>/sys</code>.
                     </div>
                 </wa-card>
 
@@ -331,7 +333,7 @@
                     <div class="feature-icon"><wa-icon name="hard-drive"></wa-icon></div>
                     <div class="feature-title">Disk I/O &amp; Usage</div>
                     <div class="feature-text">
-                        Mount-point usage, read/write throughput, and IOPS for every block device.
+                        Usage, read/write throughput, and IOPS for every block device.
                         Spot a filling partition before it takes down a service.
                     </div>
                 </wa-card>
@@ -340,7 +342,7 @@
                     <div class="feature-icon"><wa-icon name="network-wired"></wa-icon></div>
                     <div class="feature-title">Network I/O</div>
                     <div class="feature-text">
-                        Per-interface bandwidth, packets in/out, and error counters.
+                        Bandwidth, packets in/out, and error counters.
                         See exactly what's saturating your link.
                     </div>
                 </wa-card>
@@ -349,14 +351,34 @@
                     <div class="feature-icon"><wa-icon name="list-check"></wa-icon></div>
                     <div class="feature-title">Processes</div>
                     <div class="feature-text">
+                        <!-- and send signals -->
                         Full process table — CPU, memory, state, user, uptime.
-                        Sort, filter, and send signals — all from the grid.
+                        Sort and filter — all from the grid.
                     </div>
                 </wa-card>
             </div>
         </div>
     </section>
 
+
+    <!-- SHELL -->
+    <section id="shell">
+        <div class="wrap">
+            <div class="section-label"><wa-icon name="terminal"></wa-icon> Full Shell Access</div>
+            <h2 class="section-title">When the grid isn't enough, drop into a real terminal</h2>
+            <p class="section-desc">
+                MASH embeds a full interactive shell powered by xterm.js — a real PTY session
+                straight to your server, right inside the browser. Install packages, edit config
+                files, tail logs, run scripts — anything you'd do over SSH, without opening a
+                separate terminal or remembering connection details.
+            </p>
+            <p class="section-desc" style="margin-top: -1.5rem;">
+                The visual grid handles the 90% case. The shell handles the rest.
+                No capability ceiling, no "please SSH in for advanced settings" —
+                it's all one tab.
+            </p>
+        </div>
+    </section>
     <!-- HOW IT WORKS -->
     <section id="how-it-works">
         <div class="wrap">
@@ -380,10 +402,10 @@
                 <li>
                     <div>
                         <strong>Go backend reads the kernel directly</strong>
+                        <!-- Service and log data come from <code>systemctl</code> and <code>journalctl</code> via <code>os/exec</code> -->
                         <p>
                             Metrics come straight from <code>/proc</code> and <code>/sys</code>.
-                            Service and log data come from <code>systemctl</code> and
-                            <code>journalctl</code> via <code>os/exec</code>. No agents, no exporters,
+                            No agents, no exporters,
                             no Prometheus required.
                         </p>
                     </div>
@@ -409,13 +431,13 @@
                 <h2>See it running</h2>
                 <p>Hit the live demo — a real Linux server, monitored in real time. Nothing to install.</p>
                 <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
-                    <wa-button variant="success" size="large" href="#">
+                    <wa-button variant="success" size="large" href="https://demo.mashell.sh/">
                         <wa-icon name="arrow-up-right-from-square" slot="start"></wa-icon>
                         Live Demo
                     </wa-button>
-                    <wa-button variant="neutral" appearance="outlined" size="large" href="#">
+                    <wa-button variant="neutral" appearance="outlined" size="large" href="https://buy.polar.sh/polar_cl_nFN6sEXGkOGq1shs9L2382ZHnp8mmUXK07Hfp1GMHXY">
                         <wa-icon name="code-branch" slot="start"></wa-icon>
-                        GitHub
+                        Get
                     </wa-button>
                 </div>
             </div>
@@ -428,8 +450,8 @@
             <div class="footer-inner">
                 <span><span class="brand">MASH</span> — Open source server admin</span>
                 <div class="footer-links">
-                    <a href="#">GitHub</a>
-                    <a href="#">Demo</a>
+                    <a href="https://buy.polar.sh/polar_cl_nFN6sEXGkOGq1shs9L2382ZHnp8mmUXK07Hfp1GMHXY">Get</a>
+                    <a href="https://demo.mashell.sh/">Demo</a>
                 </div>
             </div>
         </div>
