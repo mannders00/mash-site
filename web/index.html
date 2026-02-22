@@ -288,8 +288,8 @@
                 <!-- , and talks to <code>systemctl</code> / <code>journalctl</code> -->
                 <!-- services, logs, files, firewall rules, cron jobs, and user accounts -->
                 MASH is a single Go binary you drop onto any Linux box. It reads
-                <code>/proc</code>, <code>/sys</code> so you don't have to.
-                The result is a real-time, interactive 2D grid in your browser —
+                <code>/proc</code> and <code>/sys</code> so you don't have to.
+                The result is a real-time, interactive grid in your browser —
                 CPU, memory, disks, network, processes,  — all in one place, updated live via SSE.
             </p>
 
@@ -414,7 +414,7 @@
                     <div>
                         <strong>Interactive grid in the browser</strong>
                         <p>
-                            A pannable, zoomable orthographic 2D grid rendered with Three.js. Each
+                            A pannable, zoomable orthographic grid rendered with Three.js. Each
                             tile is a subsystem — CPU, disks, network, processes. Data streams in
                             over Server-Sent Events. No WebSocket complexity, no polling.
                         </p>
