@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="wa-dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,12 +132,14 @@
     /* FEATURE GRID */
     .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
-    wa-card { --spacing: 1.25rem; }
+    wa-card { --spacing: 1.25rem; background: #111111 !important; }
     wa-card::part(base) {
-        background: var(--surface); border-color: var(--border);
-        border-radius: 10px; transition: border-color 0.15s;
+        /* background: var(--surface) !important; */
+        border: 1px solid var(--border) !important;
+        border-radius: 10px;
+        transition: border-color 0.15s;
     }
-    wa-card:hover::part(base) { border-color: var(--accent-border); }
+    wa-card:hover::part(base) { border-color: var(--accent-border) !important; }
 
     .feature-icon {
         display: inline-flex; align-items: center; justify-content: center;
